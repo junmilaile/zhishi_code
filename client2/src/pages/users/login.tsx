@@ -48,7 +48,7 @@ function login(props) {
           </Col>
           <Col span={16} className="align-right" onClick={() =>  setType(!type ? 1 : 0)}>
             {type ? '使用账号名密码登录' : '使用手机验证码登录'}
-            {IconMap.arrowRowRight}
+            {IconMap.arrowRight}
           </Col>
         </Row>
       </Form>

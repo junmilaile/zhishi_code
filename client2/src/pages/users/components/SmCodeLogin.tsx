@@ -58,7 +58,7 @@ function SmCodeLogin({Input,FormItem,form}) {
       <FormItem name="code" rules={loginRule.codeRule} hasFeedback>
       <Input 
       placeholder="请输入验证码"  
-      prefix={IconMap.codeIcon} 
+      prefix={IconMap.smCodeIcon} 
       addonAfter={<Button 
       disabled={disabled}
       onClick={sendSmCode}

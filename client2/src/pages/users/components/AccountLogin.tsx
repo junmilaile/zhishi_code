@@ -14,7 +14,7 @@ function AccountLogin({Input,FormItem}) {
        />
       </FormItem> 
       <FormItem name="password" rules={loginRule.passwordRule} hasFeedback>
-      <Input placeholder="请输入密码"  prefix={IconMap.passwodIcon} type="password"/>
+      <Input placeholder="请输入密码"  prefix={IconMap.passwordIcon} type="password"/>
       </FormItem> 
     </>
   );

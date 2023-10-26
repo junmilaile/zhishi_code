@@ -13,7 +13,7 @@ function UpdatePasswod({FormItem,Input,form}) {
           />
           </FormItem> 
           <FormItem name="newPassword"  hasFeedback rules={loginRule.confirmPasswordRule(form)}>
-          <Input placeholder="确认新的登录密码"  prefix={IconMap.passwodIcon} type="password"/>
+          <Input placeholder="确认新的登录密码"  prefix={IconMap.passwordIcon} type="password"/>
       </FormItem> 
     </div>
   );

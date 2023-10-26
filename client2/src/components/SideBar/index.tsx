@@ -3,16 +3,16 @@ import logo from 'common/img/logo.png'
 import {history,Link} from '@umijs/max'
 import IconMap from '../IconMap';
 
-function SideBar({Sider,Menu}) {
+function SideBar({Sider,Menu,collapse}) {
   const routeList = sessionStorage.getItem('routeList') ? JSON.parse(sessionStorage.getItem('routeList')) : []
   const pathname = history.location.pathname
 
   return (
-    <Sider theme="light" className="side-bar">
+    <Sider theme="light" className="side-bar" collapsed={collapse}>
       <div className="brand">
         <div className="logo">
           <img src={logo} alt="" />
-          <h1>渡一教育</h1>
+          {collapse ? <></> : <h1>渡一教育</h1>}
         </div>
       </div>
       <div className="menu-container">

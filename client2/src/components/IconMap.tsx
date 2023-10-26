@@ -11,7 +11,12 @@ import {
   AccountBookOutlined,
   DashboardOutlined,
   LineChartOutlined,
-  TeamOutlined
+  TeamOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  DatabaseOutlined,
+  WalletOutlined,
+  BarChartOutlined
 } from '@ant-design/icons';
 
 export default {
@@ -28,4 +33,9 @@ export default {
   dashboard: <DashboardOutlined />,
   attendance: <LineChartOutlined />,
   team: <TeamOutlined />,
+  leftArrow: <MenuFoldOutlined />,
+  rightArrow: <MenuUnfoldOutlined />,
+  rewardAndPunishment: <DatabaseOutlined />,
+  signOut: <WalletOutlined />,
+  'bar-chart': <BarChartOutlined />,
 };
