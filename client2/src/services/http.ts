@@ -88,16 +88,16 @@ class Http {
 
     // GET请求处理
     get(url: string | undefined,option={} ){
-      const options = Object.assign({method: 'GET'}, option);
+      const options = Object.assign({method: 'GET'}, option) 
       // eslint-disable-next-line no-param-reassign
-      Object.keys(options) && (url += '?' + qs.stringify(options))
+      Object.keys(option) ?  Object.keys(option) : (url += '?' + qs.stringify(option))
       return Http.staticFetch(url,options)
     }
 
       // DELETE请求处理
   del(url: string | undefined,option={} ){
     const options = Object.assign({method: 'DELETE'}, option);
-    Object.keys(options) && (url += '?' + qs.stringify(option))
+    Object.keys(option) ?  Object.keys(option) : (url += '?' + qs.stringify(option))
     return Http.staticFetch(url,options)
   }
 }

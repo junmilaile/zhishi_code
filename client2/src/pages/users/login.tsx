@@ -21,7 +21,7 @@ function login(props) {
   const submitUserInfo = (data: any) => {
     // 登录请求的参数处理，type 为必选项
     dispatch({type:'users/login',payload:{...data,type}},)
-    console.log(data)
+
   }
   // 组件选择的函数
   const ComponentSelector = (props:any) => {
