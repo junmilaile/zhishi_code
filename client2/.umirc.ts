@@ -9,6 +9,9 @@ export default defineConfig({
   model: {},
   initialState: {},
   request: {},
+  // dynamicImport: {
+  //   loading: '@/components/Loading',
+  // },
   layout: {
     title: '@umijs/max',
     locale: { enabled: false },
@@ -85,6 +88,20 @@ export default defineConfig({
       footerRender: false,
       // 不展示菜单
       menuRender: false,
+    },
+
+    {
+      name:'404页面',
+      path:'/*',
+      component: './404',
+      // 不展示顶栏
+      headerRender: false,
+      // 不展示页脚
+      footerRender: false,
+      // 不展示菜单
+      menuRender: false,
+      // 不展示菜单顶栏
+      menuHeaderRender: false,
     }
   ],
   npmClient: 'pnpm',

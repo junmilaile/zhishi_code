@@ -1,9 +1,19 @@
 import React from 'react';
-
+import StaffAmount from './components/StaffAmount';
+import { useSelector } from'@umijs/max';
 function index(props) {
+
+  const amountDataList = useSelector(state => state.dashboard);
+
+  console.log(amountDataList,'amountDataList');
+  
   return (
-    <div>
-      情况分析页面
+    <div className="dashboard-container">
+      {
+        amountDataList.amountDataList.map((item,index )=> {
+          return <StaffAmount key={index} {...item} />
+        })
+      }
     </div>
   );
 }

@@ -12,7 +12,6 @@ export default {
   effects: {
      *queryUserLogin({payload}, {call,put}) {
       const {history,history:{location: {pathname}}} = payload
-      console.log(pathname,'pathname');
       // 判断用户当前访问路径
       if(pathname !== '/users/login' && pathname !== '/users/forgetpassword') {
         if(sessionStorage?.getItem('userProfile') || sessionStorage?.getItem('token') || sessionStorage?.getItem('routeList')) return
@@ -29,8 +28,7 @@ export default {
         }
       }else {
         // 不需要拦截
-        sessionStorage?.clear()
-        console.log(23131);
+        // sessionStorage?.clear()
       }
     }
   }

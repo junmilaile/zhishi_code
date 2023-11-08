@@ -9,18 +9,23 @@ const {SubMenu, Divider, Item} = Menu
 
 function index({Header,collapse,changeCollapse}) {
 
-  // const userInfo = useSelector(state => state.userInfo)
-  // console.log(userInfo);
+  const {userInfo} = useSelector(state => state.users)
   
   const MenuTitle = (
     <>
-      <span>用户名</span>
+      <span>{userInfo.userName}</span>
       <Avatar
       style={{marginLeft: '0'}}
-      src={defaultAvatarIcon}
+      src={userInfo.avatar || defaultAvatarIcon}
       />
     </>
   )
+
+  // 用户点击退出按钮
+  const signOut = () => {
+    sessionStorage.clear()
+    window.location.href = '/users/login'
+  }
 
   return (
     <Header className="header-wrapper">
@@ -30,7 +35,7 @@ function index({Header,collapse,changeCollapse}) {
       <Menu mode="horizontal">
         <SubMenu key={'1'} title={MenuTitle}>
           <Divider/>
-          <Item key="4" icon={IconMap.signOut}>
+          <Item key="4" icon={IconMap.signOut} onClick={signOut}>
             <span>退出</span>
           </Item>
         </SubMenu>
